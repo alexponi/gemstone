@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @code.title
+%p
+  %b Text:
+  = @code.text
+%p
+  %b Code:
+  = @code.code
+%p
+  %b Attachment:
+  = @code.attachment
+%p
+  %b Link:
+  = @code.link
+
+= link_to 'Edit', edit_code_path(@code)
+\|
+= link_to 'Back', codes_path

@@ -1,0 +1,29 @@
+%h1 Listing codes
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Text
+      %th Code
+      %th Attachment
+      %th Link
+      %th
+      %th
+      %th
+
+  %tbody
+    - @codes.each do |code|
+      %tr
+        %td= code.title
+        %td= code.text
+        %td= code.code
+        %td= code.attachment
+        %td= code.link
+        %td= link_to 'Show', code
+        %td= link_to 'Edit', edit_code_path(code)
+        %td= link_to 'Destroy', code, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Code', new_code_path
