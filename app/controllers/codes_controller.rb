@@ -1,6 +1,7 @@
 class CodesController < ApplicationController
+  require 'carrierwave/orm/activerecord'
   before_action :set_code, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /codes
   # GET /codes.json
   def index

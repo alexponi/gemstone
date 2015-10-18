@@ -16,7 +16,8 @@
     - @codes.each do |code|
       %tr
         %td= code.title
-        %td= code.text
+        %td
+          %p!= code.text
         %td= code.code
         %td= code.attachment
         %td= code.link
